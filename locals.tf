@@ -7,6 +7,12 @@ locals {
 
     ## ── Nix / Infrastructure ─────────────────────────────────────────────────
 
+    "ghOrg-terraform" = {
+      description            = "Terraform project that declaratively manages the DivitMittal GitHub organization's repositories and branch protections via the GitHub provider"
+      visibility             = "public"
+      topics                 = ["flake-parts", "github", "nix", "terraform"]
+      delete_branch_on_merge = true
+    }
     "OS-nixCfg" = {
       description            = "nix (via nix-darwin, nixos, nix-on-droid, home-manager, etc.) declarative configurations to attain my deterministically reproducible layer"
       visibility             = "public"

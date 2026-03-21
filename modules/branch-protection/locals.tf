@@ -2,6 +2,7 @@ locals {
   # Repos where we enforce branch protection rules.
   # Values supply only the branch name; settings are uniform (see main.tf).
   protected_branches = {
+    "ghOrg-terraform"           = { branch = "main" }
     "OS-nixCfg"                 = { branch = "master" }
     "ai-nixCfg"                 = { branch = "master" }
     "firefox-nixCfg"            = { branch = "main" }

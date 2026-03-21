@@ -48,6 +48,11 @@ import {
   id       = each.key
 }
 
+import {
+  to = module.branch_protection.github_branch_protection.active_repos["ghOrg-terraform"]
+  id = "ghOrg-terraform:main"
+}
+
 # ---------------------------------------------------------------------------
 # Modules
 # ---------------------------------------------------------------------------
