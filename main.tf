@@ -43,14 +43,11 @@ moved {
 # Then:     terraform apply — state is populated, no resources are recreated.
 # ---------------------------------------------------------------------------
 import {
-  for_each = local.repos
+  # Only import repos that pre-existed Terraform. Repos with existing = false
+  # are created fresh by Terraform and need no import.
+  for_each = { for k, v in local.repos : k => v if try(v.existing, true) }
   to       = module.repositories.github_repository.repos[each.key]
   id       = each.key
-}
-
-import {
-  to = module.branch_protection.github_branch_protection.active_repos["ghOrg-terraform"]
-  id = "ghOrg-terraform:main"
 }
 
 # ---------------------------------------------------------------------------

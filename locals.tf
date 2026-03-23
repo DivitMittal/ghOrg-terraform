@@ -12,6 +12,7 @@ locals {
       visibility             = "public"
       topics                 = ["flake-parts", "github", "nix", "terraform"]
       delete_branch_on_merge = true
+      existing               = false # Terraform creates this; no import needed
     }
     "OS-nixCfg" = {
       description            = "nix (via nix-darwin, nixos, nix-on-droid, home-manager, etc.) declarative configurations to attain my deterministically reproducible layer"
