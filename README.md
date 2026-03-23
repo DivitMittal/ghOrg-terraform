@@ -134,8 +134,3 @@ GitHub Actions workflows are **generated from Nix** (`flake/actions/`):
 |---|---|---|
 | `flake-check` | push/PR touching `flake.nix` or `flake.lock` | Runs `nix flake check` |
 | `flake-lock-update` | weekly schedule | Auto-updates Nix inputs via `DeterminateSystems/update-flake-lock` |
-
-## Related Repositories
-
-- [DivitMittal/OS-nixCfg](https://github.com/DivitMittal/OS-nixCfg): Main Nix configurations repository
-- [DivitMittal/ai-nixCfg](https://github.com/DivitMittal/ai-nixCfg): Nix home-manager modules for AI coding assistants
