@@ -130,7 +130,7 @@ terraform apply
 
 GitHub Actions workflows are **generated from Nix** (`flake/actions/`):
 
-| Workflow | Trigger | Purpose |
-|---|---|---|
-| `flake-check` | push/PR touching `flake.nix` or `flake.lock` | Runs `nix flake check` |
-| `flake-lock-update` | weekly schedule | Auto-updates Nix inputs via `DeterminateSystems/update-flake-lock` |
+| Workflow            | Trigger                                      | Purpose                                                            |
+| ------------------- | -------------------------------------------- | ------------------------------------------------------------------ |
+| `flake-check`       | push/PR touching `flake.nix` or `flake.lock` | Runs `nix flake check`                                             |
+| `flake-lock-update` | weekly schedule                              | Auto-updates Nix inputs via `DeterminateSystems/update-flake-lock` |
