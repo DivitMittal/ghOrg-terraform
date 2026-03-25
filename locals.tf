@@ -75,61 +75,61 @@ locals {
       description            = "RAG-enhanced LLaMa-like transformer neural network based LLM for assistance on programming languages/frameworks' documentations."
       visibility             = "public"
       topics                 = ["artifical-intelligense", "deep-learning", "flake-parts", "llama", "llm", "nix", "pytorch", "rag", "transformers"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "CARLA-Autonomous-Driving" = {
       description            = "Via high-fidelity CARLA vehicle simulator & deep semantic segmentation, data from RGBA cameras and LiDAR sensors are combined to achieve comprehensive environmental awareness"
       visibility             = "public"
       topics                 = ["autonoumous-driving", "carla-simulator", "deep-learning", "pygame", "semantic-segmentation"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "Driver-Drowsiness-Detection" = {
       description            = "Real-time drowsiness detection on driver's face continuously for signs of fatigue using deep learning methodologies"
       visibility             = "public"
       topics                 = ["computer-vision", "deep-learning", "drowsiness-detection", "siamese-neural-network"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "HybridTransformer-MFIF" = {
       description            = "Implementing Focal Transformer & CrossViT Hybrid for MFIF"
       visibility             = "private"
       topics                 = ["computer-vision", "crossvit", "deep-learning", "focal-transformer", "image-fusion", "transformers"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "CUDA-Transformer" = {
       description            = "CUDA-accelerated transformer implementation"
       visibility             = "private"
       topics                 = ["cuda", "deep-learning", "diabetic-retinopathy-detection", "transformer"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "LLM-feeder" = {
       description            = "Multiple-choice questions (MCQs) are parsed, & the question is sent to a Large Language Model (LLM) to obtain an answer"
       visibility             = "private"
-      topics                 = ["llm"]
-      delete_branch_on_merge = false
+      topics                 = ["llm", "mcq", "nlp", "python", "question-answering"]
+      delete_branch_on_merge = true
     }
     "ZestaAds" = {
       description            = "Generative AI ad network with personalized, UI-integrated ads via API."
       visibility             = "public"
       topics                 = ["advertising", "ai", "concept", "genai", "ideation", "marketing", "prototype"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "Zesta-Car-App" = {
       description            = "Swift license plate recognition deep learning model with a cross-platform (mobile, web) front-end to obtain info. pertaining to the vehicle in real-time."
       visibility             = "public"
       topics                 = ["computer-vision", "deep-learning", "expo", "nodejs", "ocr-recognition", "react-native"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "Blinkit-Churn-Analysis" = {
       description            = "Analyzing customer attrition & strategies to reduce churn via AutoML techniques & PowerBI"
       visibility             = "public"
       topics                 = ["churn-analysis", "dashboards", "h2oai", "powerbi", "sweetviz"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
     "Datathon-BigData" = {
       description            = "Efficient Data Processing ETL Pipeline for Event Records"
       visibility             = "public"
       topics                 = ["aws", "aws-glue", "aws-lambda", "aws-s3", "etl-pipeline", "hadoop", "spark"]
-      delete_branch_on_merge = false
+      delete_branch_on_merge = true
     }
 
     ## ── Personal Tools / Projects ────────────────────────────────────────────
@@ -173,14 +173,13 @@ locals {
     "mcp-kaggle-tool" = {
       description            = "MCP server for Kaggle API integration - create, run, and manage Kaggle notebooks programmatically"
       visibility             = "public"
-      has_issues             = false
-      topics                 = []
+      topics                 = ["kaggle", "mcp", "mcp-server", "notebooks", "python"]
       delete_branch_on_merge = true
     }
     "AudioResSwitcher-Raycast" = {
       description            = "Control audio quality with precision. Switch sample rates, bit depth, and formats for input/output devices. Monitor current bitrate in menubar."
       visibility             = "public"
-      topics                 = []
+      topics                 = ["audio", "macos", "menubar", "raycast", "raycast-extension", "swift"]
       delete_branch_on_merge = true
     }
 
@@ -189,8 +188,15 @@ locals {
     "sync-windows" = {
       description            = "~/.* (Windows)"
       visibility             = "public"
-      topics                 = ["dotfiles", "dotfiles-windows", "flake-parts", "nix", "powershell", "windows-10", "windows-11"]
+      topics                 = ["dotfiles", "dotfiles-windows", "flake-parts", "nix", "powershell", "windows-10", "windows-11", "flake-parts", "flakes", "nix"]
       delete_branch_on_merge = false
+    }
+    "playbooks-4-windows" = {
+      description            = "Ansible playbooks for Windows configuration management"
+      visibility             = "public"
+      topics                 = ["ansible", "ansible-playbook", "windows", "windows-10", "windows-11", "nix", "flake-parts", "flakes"]
+      delete_branch_on_merge = true
+      existing               = false
     }
 
     ## ── Profile / Meta ───────────────────────────────────────────────────────
@@ -207,19 +213,13 @@ locals {
       topics                 = ["awesome-lists", "floss", "foss", "github", "sourcehut"]
       delete_branch_on_merge = false
     }
-    "employee-management" = {
-      description            = "Flutter employee management cross-platform app"
-      visibility             = "public"
-      topics                 = ["android", "cross-platform", "dart", "employee-management", "flutter", "ios"]
-      delete_branch_on_merge = false
-    }
-
     ## ── Archived ─────────────────────────────────────────────────────────────
 
     "kanata-service" = {
       description            = "A macOS launchctl wrapper to run Kanata (keyboard remapper) on startup/load as a daemon."
       visibility             = "public"
       archived               = true
+      has_issues             = false
       topics                 = ["bash", "kanata", "launchctl", "plist"]
       delete_branch_on_merge = false
     }
@@ -227,6 +227,7 @@ locals {
       description            = "~/.* (Android)"
       visibility             = "public"
       archived               = true
+      has_issues             = false
       topics                 = ["android", "dotfiles", "dotfiles-android", "flake-parts", "nix"]
       delete_branch_on_merge = false
     }
@@ -242,7 +243,16 @@ locals {
       description            = "My first app on GitHub!"
       visibility             = "public"
       archived               = true
+      has_issues             = false
       topics                 = []
+      delete_branch_on_merge = false
+    }
+    "employee-management" = {
+      description            = "Flutter employee management cross-platform app"
+      visibility             = "public"
+      archived               = true
+      has_issues             = false
+      topics                 = ["android", "cross-platform", "dart", "employee-management", "flutter", "ios"]
       delete_branch_on_merge = false
     }
   }
