@@ -31,4 +31,4 @@ crash.*.log
 
 ## Tools
 .serena/
-settings*
+*local.json
