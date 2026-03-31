@@ -201,6 +201,13 @@ locals {
 
     ## ── Profile / Meta ───────────────────────────────────────────────────────
 
+    "DivitMittal-CV" = {
+      description            = "Curriculum Vitae — LaTeX source, compiled PDFs, markdown fragments for AI agents, and Claude Code configuration; tooling managed by flake-parts with a Nix devshell providing the TeX Live environment"
+      visibility             = "private"
+      topics                 = ["claude-code", "cv", "flake-parts", "latex", "markdown", "nix", "pdf", "resume", "texlive"]
+      delete_branch_on_merge = true
+      existing               = false
+    }
     "DivitMittal" = {
       description            = "Repository to setup GitHub profile."
       visibility             = "public"
