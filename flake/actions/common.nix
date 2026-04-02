@@ -11,6 +11,8 @@
           "flake.nix"
           "flake.lock"
           "flake/**"
+          "modules/**"
+          "orgs/**"
         ];
       };
       pull_request = push;
