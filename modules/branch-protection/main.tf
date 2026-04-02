@@ -22,7 +22,8 @@ resource "github_branch_protection" "active_repos" {
   require_conversation_resolution = true
 
   # Prevent force-pushes to the default branch.
-  # Allows `--force-with-lease` but not raw `--force`.
+  # GitHub does not distinguish between --force and --force-with-lease;
+  # this blocks both.
   allows_force_pushes = false
   allows_deletions    = false
 }
