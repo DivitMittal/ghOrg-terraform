@@ -10,7 +10,7 @@ locals {
     "ghOrg-terraform" = {
       description            = "Terraform project that declaratively manages the DivitMittal GitHub organization's repositories and branch protections via the GitHub provider"
       visibility             = "public"
-      topics                 = ["flake-parts", "github", "nix", "terraform"]
+      topics                 = ["flake-parts", "github", "nix", "terraform", "terragrunt"]
       delete_branch_on_merge = true
       existing               = false # Terraform creates this; no import needed
     }
