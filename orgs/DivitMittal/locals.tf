@@ -220,6 +220,7 @@ locals {
       topics                 = ["awesome-lists", "floss", "foss", "github", "sourcehut"]
       delete_branch_on_merge = false
     }
+
     ## ── Archived ─────────────────────────────────────────────────────────────
 
     "kanata-service" = {
@@ -262,5 +263,26 @@ locals {
       topics                 = ["android", "cross-platform", "dart", "employee-management", "flutter", "ios"]
       delete_branch_on_merge = false
     }
+  }
+
+  # Branch protection rules — uniform settings, only branch name varies.
+  # Moved here from modules/branch-protection/locals.tf so each org controls
+  # its own rules independently.
+  protected_branches = {
+    "ghOrg-terraform"           = { branch = "main" }
+    "OS-nixCfg"                 = { branch = "master" }
+    "ai-nixCfg"                 = { branch = "master" }
+    "firefox-nixCfg"            = { branch = "main" }
+    "Vim-Cfg"                   = { branch = "main" }
+    "Emacs-Cfg"                 = { branch = "main" }
+    "hammerspoon-nix"           = { branch = "main" }
+    "TermEmulator-Cfg"          = { branch = "master" }
+    "tidalcycles-nix"           = { branch = "master" }
+    "PKMS"                      = { branch = "main" }
+    "TLTR"                      = { branch = "master" }
+    "professionalstay-site"     = { branch = "master" }
+    "MeriNetWorth"              = { branch = "main" }
+    "Lagrangian-Reconstruction" = { branch = "main" }
+    "hs-faust"                  = { branch = "main" }
   }
 }
