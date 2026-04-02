@@ -28,6 +28,7 @@
             alejandra
             ## CLI tools
             terraform
+            terragrunt
             gh # for manual API calls / verification
             ;
         };
